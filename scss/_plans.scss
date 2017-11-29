@@ -1,0 +1,148 @@
+.mid_lower {
+  @include gradient-bcg;
+
+  .col {
+    padding: 50px 0;
+
+    .boxes {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-self: center;
+
+      @media (min-width: 650px) and (max-width: $device-bp-additional) {
+        justify-content: space-around;
+      }
+
+      @media (min-width: $device-bp-additional) {
+        justify-content: space-between;
+      }
+    }
+
+    hr {
+      @include hr-line(250px);
+      margin-bottom: 60px;
+    }
+
+    .newbox {
+      position: relative;
+      width: 100%;
+      max-width: 450px;
+      min-width: 215px;
+      height: 415px;
+      border: 2px solid #d5d5d5;
+      text-align: center;
+      background-color: #f9f9f9;
+      margin: 30px 0;
+
+      @media (min-width: 650px) and (max-width: $device-bp-additional) {
+        width: 48.5%;
+      }
+        @media (min-width: $device-bp-additional) {
+          width: 32%;
+      }
+
+      h3 {
+        margin: 30px auto 25px;
+        font-size: 22px;
+        text-transform: uppercase;
+        color: $color-main;
+        font-weight: 500;
+      }
+    }
+
+    .newbox::before {
+      content: "";
+      width: 55px;
+      height: 55px;
+      border-radius: 100%;
+      border: 2px solid #d5d5d5;
+      position: absolute;
+      display: block;
+      top: -38px;
+      left: calc(50% - 30px);
+      background-color: #c2c2c2;
+      box-shadow: inset 0px 0px 0px 15px white;
+    }
+
+    .inner_circle {
+      width: 90px;
+      height: 90px;
+      border-radius: 100%;
+      border: 2px solid #d5d5d5;
+      display: block;
+      margin: 0 auto 25px;
+      padding: 14px 0;
+      background-color: white;
+      color: #c2c2c2;
+    }
+
+// circle with prices styling
+    .price {
+      font-size: 30px;
+      font-weight: 700;
+    }
+    .sup {
+      font-size: 14px;
+      font-weight: 600;
+      vertical-align: top;
+    }
+    .pln {
+      font-size: 14px;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+// tables styling
+    .table {
+      width:  100%;
+      text-align: center;
+      font-size: 20px;
+      line-height: 34px;
+    }
+    .table.row {
+      background-color: #e4e4e4;
+      color: #939393;
+    }
+    .table.row_2 {
+      background-color: #f1f1f1;
+      color: #757575;
+    }
+
+// bottom button style
+    .button.box {
+      width: 100px;
+      height: 30px;
+      margin: 25px auto 25px;
+      position: absolute;
+      bottom: 0;
+      line-height: 30px;
+      font-weight: 500;
+      left: calc(50% - 50px);
+    }
+
+// mid box special styles overwrite
+    .mid_box {
+      background-color: $color-main;
+      border: 2px solid $color-main;
+    }
+    .mid_box h3 {
+      color: white;
+    }
+    .mid_box .inner_circle {
+      border: 2px solid $color-main;
+    }
+    .mid_box .button {
+      background-color: white;
+      color: $color-main;
+    }
+    .mid_box::before {
+      border: none;
+      background-color: white;
+      box-shadow: inset 0px 0px 0px 15px $color-main;
+    }
+    .mid_box .table.row {
+      background-color: white;
+    }
+  }
+}

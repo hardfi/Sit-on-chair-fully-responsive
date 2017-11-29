@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Raleway, sans-serif;
+}
+.col::before, .col::after {
+  content: "";
+  clear: both;
+  display: block;
+}
+.container {
+  width:100%;
+}
+.col {
+  margin: 0 auto;
+  max-width: 70%;
+}
+.slider img {
+  width: 100%;
+  height: auto;
+}
+header {
+  background-color: black;
+}
+.logo {
+  color: white;
+  float: left;
+  line-height: 50px;
+  text-transform: uppercase;
+}
+.logo span {
+  color: #27c7ab;
+  font-weight: 700;
+}
+nav {
+  float: right;
+}
+nav ul li {
+  line-height: 50px;
+  display: inline-block;
+}
+nav a {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  margin-left: 30px;
+  letter-spacing: 0.05em;
+}
+.wide_top, .mid_lower {
+  background: linear-gradient(135deg, #ffffff 0%,#e5e5e5 100%);
+}
+.slider {
+  padding-top: 30px;
+  position: relative;
+}
+.image_top {
+  float: left;
+  margin-left: 80px;
+  width: 30%;
+}
+.text_top {
+  width: 40%;
+  float: left;
+  text-align: center;
+  margin-top: 60px;
+}
+h2 {
+  font-size: 32px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+h2 span {
+  color: #27c7ab;
+  font-weight: 700;
+}
+h6 {
+  line-height: 24px;
+  font-size: 16px;
+  font-weight: 100;
+}
+.button {
+  background-color: #27c7ab;
+  border-radius: 8px;
+  text-transform: uppercase;
+  color: white;
+}
+.button.top {
+  width: 300px;
+  height: 40px;
+  margin: 25px auto;
+  line-height: 40px;
+  font-weight: 600;
+}
+.btn_left, .btn_right {
+  position: absolute;
+  font-size: 64px;
+  color: #27c7ab;
+  top: 160px;
+  cursor: pointer;
+  user-select: none;
+}
+.btn_left {
+  left: 10px;
+}
+.btn_right {
+  right: 10px;
+}
+.slider li{
+  display: none;
+}
+.slider ul{
+  list-style: none;
+}
+.slider .visible{
+  display: block;
+}
+.mid_photos {
+  padding: 30px 0;
+}
+.pic_mid, .field_mid {
+  display: inline-block;
+  width: 31%;
+  float: left;
+  margin: 20px auto;
+  margin: 1%;
+}
+.pic_mid img {
+  width: 100%;
+  height: auto;
+}
+.field_mid {
+  padding: 5px;
+  border: 1px solid #C9CDD1;
+}
+.field_mid p {
+  font-size: 14px;
+  color: #656669;
+}
+.mid_col {
+  padding: 80px 0;
+}
+.newbox {
+  width: 32%;
+  height: 430px;
+  border: 2px solid #d5d5d5;
+  position: relative;
+  text-align: center;
+  margin-right: 1%;
+  background-color: #f9f9f9;
+  float: left;
+}
+.newbox::before {
+  content: "";
+  width: 55px;
+  height: 55px;
+  border-radius: 100%;
+  border: 2px solid #d5d5d5;
+  position: absolute;
+  display: block;
+  top: -38px;
+  left: calc(50% - 30px);
+  background-color: #c2c2c2;
+  -webkit-box-shadow: inset 0px 0px 0px 15px white);
+  -moz-box-shadow: inset 0px 0px 0px 15px white;
+  box-shadow: inset 0px 0px 0px 15px white;
+}
+.inner_circle {
+  width: 90px;
+  height: 90px;
+  border-radius: 100%;
+  border: 2px solid #d5d5d5;
+  display: block;
+  margin: 0 auto 25px;
+  padding: 14px 0;
+  background-color: white;
+  color: #c2c2c2;
+}
+.price {
+  font-size: 30px;
+  font-weight: 700;
+}
+.sup {
+  font-size: 14px;
+  font-weight: 600;
+  vertical-align: top;
+}
+.pln {
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.newbox h3 {
+  margin: 30px auto 25px;
+  font-size: 22px;
+  text-transform: uppercase;
+  color: #27c7ab;
+  font-weight: 300;
+}
+.button.box {
+  width: 100px;
+  height: 30px;
+  margin: 25px auto 25px;
+  line-height: 30px;
+  font-weight: 400;
+  position: absolute;
+  bottom: 0;
+  left: calc(50% - 50px);
+}
+.table {
+  width:  100%;
+  text-align: center;
+  font-size: 20px;
+  line-height: 34px;
+}
+.table.row {
+  background-color: #e4e4e4;
+  color: #939393;
+}
+.table.row_2 {
+  background-color: #f1f1f1;
+  color: #757575;
+}
+.mid_box {
+  background-color: #27c7ab;
+  border: 2px solid #27c7ab;
+}
+.mid_box h3 {
+  color: white;
+}
+.mid_box .inner_circle {
+    border: 2px solid #27c7ab;
+}
+.mid_box .button {
+  background-color: white;
+  color: #27c7ab;
+}
+.mid_box::before {
+  border: none;
+  background-color: white;
+  -webkit-box-shadow: inset 0px 0px 0px 15px #27c7ab);
+  -moz-box-shadow: inset 0px 0px 0px 15px #27c7ab;
+  box-shadow: inset 0px 0px 0px 15px #27c7ab;
+}
+
+/*
+color: #27c7ab;*/

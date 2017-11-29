@@ -1,0 +1,81 @@
+// section styling starts here
+header {
+  position: relative;
+  background-color: black;
+  height: $header-height;
+  .col {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: $header-height;
+
+// logo styles
+    .logo {
+      color: white;
+      text-transform: uppercase;
+    }
+    .logo span {
+      color: $color-main;
+      font-weight: 700;
+    }
+
+// menu button style (hamburger)
+    #menu_btn {
+      position: relative;
+        @media (min-width: $device-bp-mid) {
+          display: none;
+        }
+        #tip {
+          @include arrow (black, top, 42px, 13px, 12px);
+        }
+
+      // tip included here
+      img {
+        width: 50px;
+        position: relative;
+
+      }
+    }
+
+// hidden menu on <640px
+    .hidden {
+      display: none;
+    }
+
+// top menu styling
+    nav {
+      ul {
+          position: absolute;
+          top: 81px;
+          right: 10px;
+          width: 130px;
+          background-color: black;
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          z-index: 1;
+
+          @media (min-width: $device-bp-mid) {
+            position: static;
+            width: auto;
+        }
+
+        li {
+          margin: 10px auto;
+            @media (min-width: $device-bp-mid) {
+              display: inline-block;
+              margin: 0 10px;
+            }
+        }
+
+        a {
+          text-transform: uppercase;
+          text-decoration: none;
+          font-weight: 700;
+          color: white;
+          letter-spacing: 0.05em;
+        }
+      }
+    }
+  }
+}

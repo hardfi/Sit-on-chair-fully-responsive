@@ -1,0 +1,72 @@
+$min-site-width: 340px;
+$device-bp-mid: 641px;
+$device-bp-additional: 940px;
+$device-bp-large: 1101px;
+$max-site-width: 1150px;
+
+$bp-images-mid: 750px;
+$bp-images-big: 1200px;
+
+$color-main: #27c7ab;
+$footer-text-color: #9c9c9c;
+$header-height: 70px;
+
+$min-element-width: 250px;
+
+
+// gradient background for sections 2 and 4
+@mixin gradient-bcg {
+  background: linear-gradient(to bottom, #eeeeee 0%,#dad6d6 100%);
+}
+
+// main site dimensions
+.container {
+  width:100%;
+  min-width: $min-site-width;
+}
+.col {
+  margin: 0 auto;
+  width: 85%;
+  max-width: $max-site-width;
+
+  @media (min-width: $device-bp-mid) {
+    width: 70%;
+  }
+}
+
+// menu triangle
+  @mixin arrow($color, $direction, $top,$right, $size) {
+    width: $size;
+    height: $size;
+    box-sizing: border-box;
+    border: $size solid transparent;
+    border-#{$direction}: $size solid $color;
+    transform: rotate(180deg);
+    position: absolute;
+    top: $top;
+    right: $right;
+    }
+
+// all $color-main buttons
+.button {
+  background-color: $color-main;
+  border-radius: 6px;
+  text-transform: uppercase;
+  color: white;
+}
+
+// hr style
+@mixin hr-line($length) {
+  width: $length;
+  height: 4px;
+  border: 3px solid $color-main;
+  background-color: $color-main;
+  color: $color-main;
+}
+
+// h4 headings
+h4 {
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 24px;
+}
