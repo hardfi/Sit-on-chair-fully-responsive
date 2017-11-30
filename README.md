@@ -1,3 +1,4 @@
-# Sit-on-chair-fully-responsive <br>
-An example of a fully responsive website (Coders Lab bootcamp) <br>
-Website available for preview here: https://hardfi.github.io/Sit-on-chair-fully-responsive/
+# Sit-on-chair <br>
+Preview: https://hardfi.github.io/Sit-on-chair-fully-responsive/ <br>
+Fully responsive webiste<br>
+(Coders Lab bootcamp) 
