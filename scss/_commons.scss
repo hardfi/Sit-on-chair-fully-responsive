@@ -34,8 +34,22 @@ $min-element-width: 250px;
   }
 }
 
+// transition effects
+@mixin fade-in($speed) {
+  visibility: visible;
+  opacity: 1;
+  filter: alpha(opacity=100);
+  transition: $speed ease-out;
+}
+@mixin fade-out($speed) {
+  visibility: hidden;
+  opacity: 0;
+  filter: alpha(opacity=0);
+  transition: $speed ease-out;
+}
+
 // menu triangle
-  @mixin arrow($color, $direction, $top,$right, $size) {
+  @mixin arrow($color, $direction, $top, $right, $size) {
     width: $size;
     height: $size;
     box-sizing: border-box;

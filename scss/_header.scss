@@ -1,3 +1,12 @@
+// menu link styling
+@mixin menu_link {
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 700;
+  color: white;
+  letter-spacing: 0.05em;
+}
+
 // section styling starts here
 header {
   position: relative;
@@ -22,60 +31,103 @@ header {
 // menu button style (hamburger)
     #menu_btn {
       position: relative;
+      cursor: pointer;
         @media (min-width: $device-bp-mid) {
           display: none;
         }
-        #tip {
+        // tip included here
+        #tip1 {
           @include arrow (black, top, 42px, 13px, 12px);
+          @include fade-in(300ms);
+
+          &.hidden {
+            @include fade-out(300ms);
+          }
         }
 
-      // tip included here
       img {
         width: 50px;
         position: relative;
-
       }
-    }
-
-// hidden menu on <640px
-    .hidden {
-      display: none;
     }
 
 // top menu styling
     nav {
+      position: relative;
       ul {
           position: absolute;
-          top: 81px;
-          right: 10px;
-          width: 130px;
           background-color: black;
           display: flex;
           justify-content: center;
           flex-wrap: wrap;
           z-index: 1;
+          @include fade-in(300ms);
+
+          // hidden menu on <640px
+          &.hidden {
+            @include fade-out(300ms);
+          }
+
+          li {
+            margin: 10px auto;
+            list-style-type: none;
+
+            a {
+              @include menu_link;
+            }
+          }
+        }
+
+        ul.menu {
+          right: -16px;
+          top: 66px;
+          width: 130px;
 
           @media (min-width: $device-bp-mid) {
             position: static;
             width: auto;
-        }
 
-        li {
-          margin: 10px auto;
-            @media (min-width: $device-bp-mid) {
-              display: inline-block;
-              margin: 0 10px;
+            li {
+              @media (min-width: $device-bp-mid) {
+                display: inline-block;
+                margin: 0 10px;
+              }
             }
+          }
         }
 
-        a {
-          text-transform: uppercase;
-          text-decoration: none;
-          font-weight: 700;
-          color: white;
-          letter-spacing: 0.05em;
+        ul.sub_menu1 {
+          right: 126px;
+          top: 66px;
+          width: 150px;
+
+          @media (min-width: $device-bp-mid) {
+            right: 58%;
+            top: 56px;
+          }
+
+          #tip2 {
+            @include arrow (black, left, 15px, -12px, 12px);
+            @include fade-in(300ms);
+
+            @media (min-width: $device-bp-mid) {
+              display: none;
+            }
+          }
+
+          #tip3 {
+            display: none;
+
+            @media (min-width: $device-bp-mid) {
+              display: block;
+              @include arrow (black, top, -24px, 63px, 12px);
+              @include fade-in(300ms);
+            }
+            &.hidden {
+              @include fade-out(300ms);
+            }
+          }
         }
       }
     }
   }
-}
